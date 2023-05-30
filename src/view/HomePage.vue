@@ -1,17 +1,18 @@
 <template>
-    <div id="HomePage">
-    <nav>
-      <router-link to="/artist">Artist</router-link>
-      <router-link to="/playlist">Playlist</router-link>
-      <router-link to="/music">Music</router-link>
-    </nav>
-    </div>
+  <div id="HomePage" class="bg-fuchsia-50">
+  
+  </div>
 </template>
 
 <script>
+import SignupForm from '@/components/authentication/Signup.vue';
+
 
 export default {
-    name: 'HomePage', 
-    
+  name: 'HomePage',
+  components: [
+    SignupForm
+  ]
+
 }
 </script>

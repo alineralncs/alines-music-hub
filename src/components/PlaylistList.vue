@@ -1,23 +1,26 @@
 <template>
-    <p>oioioio</p>
     <div id="PlaylistList">
-        <ul v-if="playlists.length > 0">
-            <li v-for="playlist in playlists" :key="playlist.id">
-                <div class="playlist-container">
-                    <div class="playlist-info">
-                        <p class="playlist-name">{{ playlist.name }}</p>
-                        <ul class="music-list">
-                            <li v-for="music in playlist.music" :key="music.id">
-                                <p>{{ music.lyrics }}A</p>
-                            </li>
-                        </ul>
+
+                <div class="min-h-screen bg-gray-100 mx-auto flex items-center">
+            <div
+                class="container mx-auto p-9 bg-white max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 " v-for="playlist in playlists" :key="playlist.id">
+                <img class="rounded-xl" :src="playlist.imageURL"
+                                alt="Playlist cover" />
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h1 class="mt-5 text-2xl font-semibold text-left">{{ playlist.name }}</h1>
+                        <p class="mt-2 text-slate-500 text-justify" v-for="music in playlist.music" :key="music.id">{{ music.name }}</p>
                     </div>
-                    <div class="playlist-image">
-                        <img :src="playlist.imageURL" alt="Playlist Image" />
+                    <div>
+                        <button
+                            class="text-white text-md font-semibold bg-green-400 py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-500 transform-gpu hover:scale-110 "></button>
                     </div>
                 </div>
-            </li>
-        </ul>
+            </div>
+        </div>
+
+
+        
     </div>
 </template>
 
