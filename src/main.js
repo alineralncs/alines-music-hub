@@ -6,11 +6,13 @@ import './style.css'
 import HomePage from './view/HomePage.vue'
 import PlaylistList from './/components/PlaylistList.vue'
 import ArtistList from './components/ArtistList.vue'
+import ArtistDetails from './components/ArtistDetails.vue'
 import MusicList from './components/MusicList.vue'
 
 const routes = [
   { path: '/', component: HomePage },
   { path: '/artist', component: ArtistList },
+  { path: '/artist/:id', component: ArtistDetails },
   { path: '/playlist', component: PlaylistList },
   { path: '/music', component: MusicList },
 ];
