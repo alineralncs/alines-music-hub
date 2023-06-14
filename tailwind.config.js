@@ -5,7 +5,18 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        rosa: {
+          claro: '#fbcfe8',
+          escuro: '#be185d',
+          hover: '#fb7185',
+        }
+      },
+      fontFamily: {
+          inter: ['Inter',  'sans-serif']
+      }
+    },
   },
   plugins: [],
 }
