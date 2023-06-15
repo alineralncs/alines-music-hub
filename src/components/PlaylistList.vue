@@ -1,7 +1,6 @@
 <template>
     <div id="PlaylistList">
-
-                <div class="min-h-screen bg-gray-100 mx-auto flex items-center">
+            <div class="min-h-screen bg-gray-100 mx-auto flex items-center">
             <div
                 class="container mx-auto p-9 bg-white max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 " v-for="playlist in playlists" :key="playlist.id">
                 <img class="rounded-xl" :src="playlist.imageURL"
