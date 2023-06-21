@@ -10,8 +10,7 @@ import ArtistDetails from './components/ArtistDetails.vue'
 import MusicList from './components/MusicList.vue'
 import CreateArtist from './components/create/CreateArtist.vue'
 import CreateMusic from './components/create/CreateMusic.vue'
-
-import SignupForm from './components/authentication/SignupForm.vue'
+import PlaylistRecomendation from './components/PlaylistRecomendation.vue'
 
 const routes = [
   { path: '/', component: HomePage },
@@ -21,7 +20,8 @@ const routes = [
   { path: '/music', component: MusicList },
   { path: '/createArtist', component: CreateArtist },
   { path: '/createMusic', component: CreateMusic },
-  { path: '/signup', component: SignupForm },
+  { path: '/foryou', component: PlaylistRecomendation },
+
 ];
 
 const router = createRouter({

@@ -1,15 +1,15 @@
 <template>
   <div id="ArtistDetails">
     <div v-if="artists">
-      <div class="min-h-screen bg-gray-100 mx-auto flex items-center">
+      <div class="min-h-screen  mx-auto flex items-center">
         <div
-          class="container mx-auto p-9 bg-white max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300">
+          class="container mx-auto p-9 bg-roxo-cards max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300">
           <img class="rounded-xl" :src="artists.imageURL" alt="Playlist cover" />
           <div class="flex justify-between items-center">
             <div>
               <h1 class="mt-5 text-2xl font-semibold">{{ artists.name }}</h1>
               
-              <h2 class="mt-5 text-2xl font-semibold text-justify" >Músicas:</h2>
+              <h2 class="mt-5 text-2xl font-semibold text-justify " >Músicas:</h2>
               <p class="mt-2 text-slate-500 text-justify" v-for="music in artists.musics" :key="music.id">
                 {{ music.name }}
               </p>
