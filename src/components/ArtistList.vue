@@ -1,6 +1,6 @@
 <template>
     <div id="Artist" >
-        <div class="flex justify-center items-center mt-20 mb-10">
+        <div v-show="artists.length > 0" class="flex justify-center items-center mt-20 mb-10">
             <!-- Search input field -->
             <input v-model="searchQuery" type="text" placeholder="Buscar artistas..."
                 class="px-4 py-2 rounded-full border border-roxo-escuro w-200 bg-roxo-fundo shadow-2xl focus:outline-none focus:ring-2 focus:ring-blue-400" />
@@ -37,7 +37,7 @@
             
             </div>
             <div v-else class="flex justify-center items-center mt-40 mb-10">
-                    <p>No artists found.</p>
+                <NotfoundComponent/>
                 </div>
         </div>
         <button v-if="currentPage < totalPages" @click="fetchNextPage"
@@ -51,9 +51,13 @@
   
 <script>
 import axios from 'axios';
+import NotfoundComponent from '../components/notfound/NotfoundComponent.vue'
 
 export default {
     name: 'ArtistList',
+    components: {
+        NotfoundComponent
+    },
     data() {
         return {
             artists: [],

@@ -1,7 +1,6 @@
 <template>
   <div>
-
-    <div class="bg-gray-100">
+    <div class="bg-roxo-fundo">
       <nav class="
           container
           px-6
