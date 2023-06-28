@@ -1,8 +1,12 @@
 <template>
     <div id="PlaylistList">
-        <div class="h-screen bg-gray-100 flex items-center justify-center mt-40">
+        <div class="bg-roxo-fundo flex items-center justify-center h-screen">
+
+            
+
+
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                <div class="container mx-auto p-9 bg-white max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300"
+                <div class="mx-auto p-9 bg-white max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300"
                     v-for="playlist in playlists" :key="playlist.id">
                     <div class="flex justify-between items-center">
                         <div>
