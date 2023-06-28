@@ -2,18 +2,11 @@
     <div id="PlaylistRecomendation" class="bg-roxo-fundo flex justify-center items-center h-screen">
         <!-- <h1 class="text-2xl font-bold">Playlist Recommendation</h1> -->
         <div class="flex drop-shadow-2xl bg-white rounded-3xl ">
-          
-                <!-- <section class="  rounded-l-2xl hidden md:flex">
-
-            <img  v-show="!recomendationCreated && !playlist" class="w-full" src="../assets/Ativo12.svg" />
-            <img v-show="recomendationCreated && playlist" class="w-full" src="../assets/Ativo11.svg" />
-          <img class="w-full " src="../assets/Ativo10.svg" /> 
-
-            </section> -->
-        
             <section class="m-4 p-10 justify-center items-center " v-show="!recomendationCreated && !playlist">
+                <div class="flex justify-center items-center"> 
                 <!-- <h1 class="text-2xl font-bold">Criar uma Playlist</h1>  -->
-                <img  class="w-20  rounded-full bg-roxo-escuro justify-center items-center h-20" src="../assets/Ativo11.svg" />
+                <img  class="w-40  rounded-full justify-center items-center h-40" src="../assets/Ativo11.svg" />
+                </div>
                 <form @submit.prevent="createRecomendation" class="mt-4">
                     <div class="mb-4 w-full">
                         <input
@@ -45,54 +38,9 @@
             <section>
                 <div v-if="recomendationCreated && playlist" class="mt-4 text-green-600 font-medium">
                     Recommendation created successfully!
-                    <div class="h-screen bg-gray-100 flex items-center justify-center mt-40">
-            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                <div class="container mx-auto p-9 bg-white max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300"
-                    v-for="playlist in playlist" :key="playlist.id">
-                    <div class="flex justify-between items-center">
-                        <div>
-                            <h1 class="mt-5 text-2xl font-semibold justify-center text-center">{{ playlist.name }}</h1>
-                            <ul v-if="playlist.showMoreItems" class="flex flex-wrap">
-                                <li v-for="music in playlist.music" :key="music.id"
-                                    class="rounded-3xs p-2 mb-4 flex items-center text-left">
-                                    <div>
-                                        <img class="rounded-lg w-10 h-10 mr-2" :src="music.artist" alt="Playlist cover" />
-                                    </div>
-                                    <div>
-                                        <p class=" font-bold text-left">{{ music.name }}</p>
-                                        <p class="text-gray-500 text-left">{{ music.genre }} - {{ music.subgenre }}</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul v-else>
-                                <li v-for="music in playlist.music.slice(0, itemsToShow)" :key="music.id"
-                                    class="p-2 mb-4 flex items-center">
-                                    <div>
-                                        <img class="rounded-lg w-10 h-10 mr-2" :src="music.artist" alt="Playlist cover" />
-                                    </div>
-                                    <div>
-                                        <p class="text-left font-bold">{{ music.name }}</p>
-                                        <p class="text-gray-500 text-left">{{ music.genre }} - {{ music.subgenre }}</p>
-                                    </div>
-                                </li>
-                            </ul>
-
-                        </div>
-
-                        <div>
-
-                        </div>
-                    </div>
-                    <div>
-                        <button v-if="playlist.music.length > itemsToShow"
-                            class="text-blue-500 hover:text-blue-700 font-semibold" @click="showMore(playlist)"
-                            v-show="!playlist.showMoreItems">Show More</button>
-                        <button class="text-blue-500 hover:text-blue-700 font-semibold" @click="showLess(playlist)"
-                            v-show="playlist.showMoreItems">Show Less</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+             
+              
+        
                 </div>
             </section>
         </div>
